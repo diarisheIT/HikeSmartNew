@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-sage-50: #f2f7f2;
+  --color-sage-100: #e0ebe0;
+  --color-sage-200: #c2d8c2;
+  --color-sage-300: #9bbe9b;
+  --color-sage-400: #6f9e6f;
+  --color-sage-500: #4f8150;
+  --color-sage-600: #3d6740;
+  --color-sage-700: #325335;
+  --color-sage-800: #2a432d;
+  --color-sage-900: #243826;
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
