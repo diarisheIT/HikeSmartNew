@@ -46,7 +46,7 @@ export default function HeroSection({ children }: HeroSectionProps) {
         </p>
 
         {/* Divider */}
-        <div className="w-12 h-px bg-gold-400/60 mx-auto" />
+        <div className="w-12 h-px bg-sage-400/60 mx-auto" />
 
         {children}
       </div>

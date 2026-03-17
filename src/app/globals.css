@@ -70,7 +70,7 @@ body {
   background: linear-gradient(
     90deg,
     transparent,
-    var(--color-gold-400),
+    var(--color-sage-400),
     transparent
   );
   background-size: 200% 100%;

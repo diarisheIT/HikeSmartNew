@@ -17,7 +17,7 @@ export default function Navbar({ onLogoClick, isTransparent }: NavbarProps) {
       <div className="mx-auto max-w-5xl px-4 py-4 flex items-center justify-between">
         <button
           onClick={onLogoClick}
-          className="text-3xl text-cream-50 hover:text-gold-400 transition-colors duration-200"
+          className="text-3xl text-cream-50 hover:text-sage-400 transition-colors duration-200"
           style={{ fontFamily: '"DM Serif Display", Georgia, serif' }}
         >
           HikeSmart

@@ -59,7 +59,7 @@ export default function TrailCard({ trail }: TrailCardProps) {
           href={mapsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-md bg-white/15 px-4 py-2 text-sm font-medium text-cream-100 transition-all duration-200 hover:bg-white/25"
+          className="rounded-md bg-sage-500/30 px-4 py-2 text-sm font-medium text-cream-100 transition-all duration-200 hover:bg-sage-400/40"
         >
           View Location
         </a>
@@ -68,7 +68,7 @@ export default function TrailCard({ trail }: TrailCardProps) {
             href={trail.official_url}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-md border border-white/15 px-4 py-2 text-sm font-medium text-cream-100/70 transition-all duration-200 hover:bg-white/10"
+            className="rounded-md border border-sage-500/40 px-4 py-2 text-sm font-medium text-cream-100/70 transition-all duration-200 hover:bg-sage-500/20"
           >
             Official Website
           </a>
