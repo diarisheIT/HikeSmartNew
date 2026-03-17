@@ -33,7 +33,7 @@ interface GeoJSON {
 }
 
 async function seed() {
-  const filePath = join(process.cwd(), "hikesmart_processed.json");
+  const filePath = join(process.cwd(), "src", "data", "hikesmart_processed.json");
   const raw = readFileSync(filePath, "utf-8");
   const data: GeoJSON = JSON.parse(raw);
 

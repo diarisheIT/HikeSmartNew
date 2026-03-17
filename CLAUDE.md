@@ -17,7 +17,7 @@ always use context7
 
 ## Documentation
 
-- [Project Spec](project_spec.md) - tech details
+- [Project Spec](docs/project_spec.md) - tech details
 - [Changelog](docs/changelog.md) - Version History
 Update changelog after major milestones and major additions to the project.
 

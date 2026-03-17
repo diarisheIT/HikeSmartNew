@@ -1,7 +1,7 @@
 import { GoogleGenAI } from "@google/genai";
 import type { Intent } from "./types";
 import { getCache, setCache } from "./cache";
-import crypto from "crypto";
+import { hashKey } from "./utils";
 
 const SYSTEM_PROMPT = `You are a hiking query parser for Hong Kong trails. Extract structured information from the user's natural language query.
 
@@ -27,10 +27,6 @@ const COMMON_PATTERNS: Array<{ keywords: string[]; intent: Partial<Intent> }> = 
   { keywords: ["under 5"], intent: { max_length: 5 } },
   { keywords: ["under 10"], intent: { max_length: 10 } },
 ];
-
-function hashKey(text: string): string {
-  return crypto.createHash("sha256").update(text).digest("hex").slice(0, 16);
-}
 
 function matchCommonPattern(query: string): Intent | null {
   const lower = query.toLowerCase();
