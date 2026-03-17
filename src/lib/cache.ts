@@ -2,7 +2,10 @@ import { kv } from "@vercel/kv";
 
 // In-memory fallback for local dev (no KV credentials)
 const localCache = new Map<string, { value: string; expires: number }>();
-const useKV = Boolean(process.env.KV_REST_API_URL);
+const useKV =
+  process.env.KV_ENABLED === "true" &&
+  Boolean(process.env.KV_REST_API_URL) &&
+  !process.env.KV_REST_API_URL?.includes("your-upstash-url");
 
 export async function getCache<T>(key: string): Promise<T | null> {
   if (useKV) {
