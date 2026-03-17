@@ -1,7 +1,6 @@
 "use client";
 
 import { ReactNode } from "react";
-import { motion } from "framer-motion";
 
 interface HeroSectionProps {
   children: ReactNode;
@@ -52,23 +51,6 @@ export default function HeroSection({ children }: HeroSectionProps) {
         {children}
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-50">
-        <span className="text-xs text-cream-100 tracking-widest uppercase">Scroll</span>
-        <motion.div animate={{ y: [0, 6, 0] }} transition={{ repeat: Infinity, duration: 1.8 }}>
-          <svg
-            className="w-4 h-4 text-cream-100"
-            viewBox="0 0 16 16"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <polyline points="4 6 8 10 12 6" />
-          </svg>
-        </motion.div>
-      </div>
     </section>
   );
 }

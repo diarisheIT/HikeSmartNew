@@ -18,7 +18,7 @@ export default function TrailCard({ trail }: TrailCardProps) {
   )}`;
 
   return (
-    <div className="rounded-lg border border-forest-700 bg-forest-800 p-5 transition-all duration-200 hover:border-forest-700/80 hover:shadow-lg hover:shadow-black/20">
+    <div className="rounded-xl border border-white/10 bg-white/10 backdrop-blur-xl p-5 transition-all duration-200 hover:bg-white/15 hover:border-white/20 hover:shadow-lg hover:shadow-black/30">
       <div className="mb-3 flex items-start justify-between gap-2">
         <div>
           <h3 className="font-semibold text-cream-50">{trail.name_en}</h3>
@@ -59,7 +59,7 @@ export default function TrailCard({ trail }: TrailCardProps) {
           href={mapsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-md bg-forest-700 px-4 py-2 text-sm font-medium text-cream-100 transition-all duration-200 hover:bg-forest-700/80"
+          className="rounded-md bg-white/15 px-4 py-2 text-sm font-medium text-cream-100 transition-all duration-200 hover:bg-white/25"
         >
           View Location
         </a>
@@ -68,7 +68,7 @@ export default function TrailCard({ trail }: TrailCardProps) {
             href={trail.official_url}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-md border border-forest-700 px-4 py-2 text-sm font-medium text-cream-100/70 transition-all duration-200 hover:bg-forest-700/50"
+            className="rounded-md border border-white/15 px-4 py-2 text-sm font-medium text-cream-100/70 transition-all duration-200 hover:bg-white/10"
           >
             Official Website
           </a>

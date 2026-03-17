@@ -10,7 +10,7 @@ export default function WeatherBanner({ weather }: WeatherBannerProps) {
   if (!hasData && weather.warnings.length === 0) return null;
 
   return (
-    <div className="w-full max-w-2xl rounded-lg border border-forest-700 bg-forest-800 p-4">
+    <div className="w-full max-w-2xl rounded-xl border border-white/10 bg-white/10 backdrop-blur-xl p-4">
       <div className="flex flex-wrap items-center gap-4">
         {weather.temperature != null && (
           <div className="flex items-center gap-1">

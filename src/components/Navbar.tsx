@@ -11,7 +11,7 @@ export default function Navbar({ onLogoClick, isTransparent }: NavbarProps) {
       className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
         isTransparent
           ? "bg-transparent"
-          : "bg-forest-700/90 backdrop-blur-md border-b border-white/10"
+          : "bg-white/10 backdrop-blur-xl border-b border-white/10"
       }`}
     >
       <div className="mx-auto max-w-5xl px-4 py-4 flex items-center justify-between">

@@ -37,7 +37,7 @@ export default function SearchBar({
             type="text"
             value={query}
             onChange={(e) => onQueryChange(e.target.value)}
-            className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-cream-50 backdrop-blur-sm transition-all duration-200 focus:border-gold-400/50 focus:outline-none focus:ring-2 focus:ring-gold-400/20"
+            className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-cream-50 backdrop-blur-sm transition-all duration-200 focus:border-sage-400/60 focus:outline-none focus:ring-2 focus:ring-sage-400/25"
           />
           {!query && (
             <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-cream-50/50">
@@ -50,17 +50,17 @@ export default function SearchBar({
           type="date"
           value={date}
           onChange={(e) => onDateChange(e.target.value)}
-          className="rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-cream-50 backdrop-blur-sm transition-all duration-200 focus:border-gold-400/50 focus:outline-none focus:ring-2 focus:ring-gold-400/20"
+          className="rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-cream-50 backdrop-blur-sm transition-all duration-200 focus:border-sage-400/60 focus:outline-none focus:ring-2 focus:ring-sage-400/25"
         />
       </div>
       <button
         type="submit"
         disabled={loading || !query.trim()}
-        className="w-full rounded-lg bg-gold-400 px-6 py-3 font-medium text-forest-900 shadow-sm transition-all duration-200 hover:bg-gold-300 disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
+        className="w-full rounded-lg bg-sage-500 px-6 py-3 font-medium text-cream-50 shadow-sm transition-all duration-200 hover:bg-sage-400 disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
       >
         {loading ? (
           <span className="flex items-center gap-2">
-            <span className="h-4 w-4 animate-spin rounded-full border-2 border-forest-900/30 border-t-forest-900" />
+            <span className="h-4 w-4 animate-spin rounded-full border-2 border-cream-50/30 border-t-cream-50" />
             Searching...
           </span>
         ) : (

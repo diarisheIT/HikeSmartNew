@@ -57,6 +57,23 @@ export default function Home() {
 
   return (
     <LayoutGroup>
+      {/* Persistent background — blurs when results are shown */}
+      <div
+        className="fixed inset-0 transition-all duration-700"
+        style={{
+          backgroundImage: "url('/hero-bg.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          filter: viewMode === "results" ? "blur(14px)" : "none",
+          transform: viewMode === "results" ? "scale(1.08)" : "scale(1)",
+        }}
+      />
+      {/* Darkening overlay — deepens in results mode */}
+      <div
+        className="fixed inset-0 transition-all duration-700"
+        style={{ background: viewMode === "results" ? "rgba(0,0,0,0.55)" : "rgba(0,0,0,0)" }}
+      />
+
       <Navbar onLogoClick={resetToHero} isTransparent={viewMode === "hero"} />
 
       <AnimatePresence mode="wait">
@@ -88,7 +105,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="pt-24 pb-12 mx-auto max-w-2xl px-4"
+            className="relative z-10 pt-24 pb-12 mx-auto max-w-2xl px-4 min-h-screen"
           >
             <motion.div layoutId="search-bar" className="mb-8 w-full">
               <SearchBar
