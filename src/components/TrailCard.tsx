@@ -18,18 +18,18 @@ export default function TrailCard({ trail }: TrailCardProps) {
   )}`;
 
   return (
-    <div className="rounded-lg border border-sage-200 bg-white p-5 shadow-sm transition-all duration-200 hover:shadow-md">
+    <div className="rounded-lg border border-forest-700 bg-forest-800 p-5 transition-all duration-200 hover:border-forest-700/80 hover:shadow-lg hover:shadow-black/20">
       <div className="mb-3 flex items-start justify-between gap-2">
         <div>
-          <h3 className="font-semibold text-sage-900">{trail.name_en}</h3>
+          <h3 className="font-semibold text-cream-50">{trail.name_en}</h3>
           {trail.name_ch && (
-            <p className="text-sm text-sage-500">{trail.name_ch}</p>
+            <p className="text-sm text-cream-100/60">{trail.name_ch}</p>
           )}
         </div>
         {trail.difficulty && (
           <span
             className={`shrink-0 rounded-full px-3 py-1 text-xs font-medium ${
-              difficultyColors[trail.difficulty] ?? "bg-sage-100 text-sage-700"
+              difficultyColors[trail.difficulty] ?? "bg-forest-700 text-cream-100"
             }`}
           >
             {trail.difficulty}
@@ -37,7 +37,7 @@ export default function TrailCard({ trail }: TrailCardProps) {
         )}
       </div>
 
-      <div className="mb-4 flex flex-wrap gap-x-4 gap-y-1 text-sm text-sage-600">
+      <div className="mb-4 flex flex-wrap gap-x-4 gap-y-1 text-sm text-cream-100/70">
         {trail.length_km != null && <span>{trail.length_km} km</span>}
         {trail.region_en && <span>{trail.region_en}</span>}
         {trail.trail_type_en && <span>{trail.trail_type_en}</span>}
@@ -47,7 +47,7 @@ export default function TrailCard({ trail }: TrailCardProps) {
       </div>
 
       {(trail.start_point_en || trail.finish_point_en) && (
-        <div className="mb-4 text-sm text-sage-500">
+        <div className="mb-4 text-sm text-cream-100/50">
           {trail.start_point_en && <span>From: {trail.start_point_en}</span>}
           {trail.start_point_en && trail.finish_point_en && <span> | </span>}
           {trail.finish_point_en && <span>To: {trail.finish_point_en}</span>}
@@ -59,7 +59,7 @@ export default function TrailCard({ trail }: TrailCardProps) {
           href={mapsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-md bg-sage-100 px-4 py-2 text-sm font-medium text-sage-700 transition-all duration-200 hover:bg-sage-200"
+          className="rounded-md bg-forest-700 px-4 py-2 text-sm font-medium text-cream-100 transition-all duration-200 hover:bg-forest-700/80"
         >
           View Location
         </a>
@@ -68,7 +68,7 @@ export default function TrailCard({ trail }: TrailCardProps) {
             href={trail.official_url}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-md border border-sage-200 px-4 py-2 text-sm font-medium text-sage-600 transition-all duration-200 hover:bg-sage-50"
+            className="rounded-md border border-forest-700 px-4 py-2 text-sm font-medium text-cream-100/70 transition-all duration-200 hover:bg-forest-700/50"
           >
             Official Website
           </a>

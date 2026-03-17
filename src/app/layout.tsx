@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { DM_Serif_Display, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const dmSerif = DM_Serif_Display({
+  weight: "400",
+  variable: "--font-dm-serif",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
   subsets: ["latin"],
 });
 
@@ -26,14 +27,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-sage-50 text-sage-900 antialiased`}
+        className={`${dmSerif.variable} ${jakarta.variable} min-h-screen bg-forest-900 text-cream-50 antialiased`}
       >
-        <header className="border-b border-sage-200 bg-white">
-          <div className="mx-auto max-w-4xl px-4 py-4">
-            <h1 className="text-xl font-bold text-sage-800">HikeSmart</h1>
-          </div>
-        </header>
-        <main className="mx-auto max-w-4xl px-4 py-8">{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   );

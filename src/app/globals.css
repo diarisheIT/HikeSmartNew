@@ -12,10 +12,51 @@
   --color-sage-800: #2a432d;
   --color-sage-900: #243826;
 
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-forest-900: #0a1f0d;
+  --color-forest-800: #132b16;
+  --color-forest-700: #1a3a1e;
+
+  --color-gold-400: #c9a84c;
+  --color-gold-300: #dbc478;
+
+  --color-cream-50: #faf8f0;
+  --color-cream-100: #f0ead6;
+
+  --font-sans: var(--font-jakarta);
+  --font-heading: var(--font-dm-serif);
+  --font-mono: monospace;
 }
 
 body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+.font-heading {
+  font-family: var(--font-heading), Georgia, serif;
+}
+
+@keyframes shimmer-border {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-border::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-gold-400),
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: shimmer-border 1.5s ease-in-out infinite;
 }

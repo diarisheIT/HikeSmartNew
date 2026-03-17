@@ -10,36 +10,36 @@ export default function WeatherBanner({ weather }: WeatherBannerProps) {
   if (!hasData && weather.warnings.length === 0) return null;
 
   return (
-    <div className="w-full max-w-2xl rounded-lg border border-sage-200 bg-white p-4 shadow-sm">
+    <div className="w-full max-w-2xl rounded-lg border border-forest-700 bg-forest-800 p-4">
       <div className="flex flex-wrap items-center gap-4">
         {weather.temperature != null && (
           <div className="flex items-center gap-1">
-            <span className="text-sm text-sage-500">Temp</span>
-            <span className="font-medium text-sage-800">
+            <span className="text-sm text-sage-400">Temp</span>
+            <span className="font-medium text-cream-50">
               {weather.temperature}C
             </span>
           </div>
         )}
         {weather.condition && (
           <div className="flex items-center gap-1">
-            <span className="text-sm text-sage-500">Condition</span>
-            <span className="font-medium text-sage-800">
+            <span className="text-sm text-sage-400">Condition</span>
+            <span className="font-medium text-cream-50">
               {weather.condition}
             </span>
           </div>
         )}
         {weather.humidity != null && (
           <div className="flex items-center gap-1">
-            <span className="text-sm text-sage-500">Humidity</span>
-            <span className="font-medium text-sage-800">
+            <span className="text-sm text-sage-400">Humidity</span>
+            <span className="font-medium text-cream-50">
               {weather.humidity}%
             </span>
           </div>
         )}
         {weather.forecast && !weather.condition && (
           <div className="flex items-center gap-1">
-            <span className="text-sm text-sage-500">Forecast</span>
-            <span className="font-medium text-sage-800">
+            <span className="text-sm text-sage-400">Forecast</span>
+            <span className="font-medium text-cream-50">
               {weather.forecast}
             </span>
           </div>

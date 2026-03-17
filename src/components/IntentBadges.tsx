@@ -19,7 +19,7 @@ export default function IntentBadges({ intent }: IntentBadgesProps) {
       {badges.map((badge) => (
         <span
           key={badge.label}
-          className="rounded-full bg-sage-100 px-3 py-1 text-sm text-sage-700"
+          className="rounded-full bg-forest-700 px-3 py-1 text-sm text-sage-300"
         >
           <span className="font-medium">{badge.label}:</span> {badge.value}
         </span>
