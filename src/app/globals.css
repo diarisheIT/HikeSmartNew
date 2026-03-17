@@ -1,5 +1,21 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "DM Serif Display";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/DMSerifDisplay-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "DM Serif Display";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/DMSerifDisplay-Italic.ttf") format("truetype");
+}
+
 @theme inline {
   --color-sage-50: #f2f7f2;
   --color-sage-100: #e0ebe0;
